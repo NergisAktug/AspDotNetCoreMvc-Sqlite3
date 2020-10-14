@@ -1,0 +1,19 @@
+﻿@model ProjeCore.Models.Birim
+@{
+    ViewData["Title"] = "BirimGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+<!--Daha sonra Textlere girilen datalar Default controlindeki BirimGuncelle actionuna gider. -->
+@using (Html.BeginForm("BirimGuncelle", "Default", FormMethod.Post))
+{
+    <b>Birim Id</b><!--Veri tabanında label olarak birsey cekmek icin kullanılır@Html.LabelFor(x=>x.Departmanad)-->
+    @Html.TextBoxFor(x => x.BirimId, new { @class = "form-control" })
+    <br />
+
+    <b>Birim Adı</b><!--Veri tabanında label olarak birsey cekmek icin kullanılır@Html.LabelFor(x=>x.Departmanad)-->
+    @Html.TextBoxFor(x => x.BirimAd, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-default" style="background-color:#e48809;color:white">Birim  Güncelle</button>
+}
+
